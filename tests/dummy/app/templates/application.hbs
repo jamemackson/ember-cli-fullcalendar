@@ -1,3 +1,52 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<div class="container">
+	<h1>ui-scheduler</h1>
+	<h2>A week-view scheduler based on d3 and meant for both mobile and desktop</h2>
 
-{{outlet}}
+	<h3>Description</h3>
+	<p>	
+		Allows users to see a week-view (strictly speaking it is any number of days you like) where days are 
+		spread across the horizontal space available and time-of-day is shown on the vertical dimension. 
+	</p>
+	<p>
+		Events that show on the scheduler canvas have the following key properties:
+		<ul>
+			<li><code>editable</code> - descriptive attributes of the event can be edited</li>
+			<li><code>movable</code> - timing of the event is changable so event can be dragged to a new time</li>
+		</ul>
+		
+		Functionally this component is meant to both present events but also allow users to interact and modify them as well. 
+	</p>
+	<h3>Usage</h3>
+	There are three considerations in using this components:
+	<ol>
+		<li>Configuring the stage</li>
+		<li>Updating the events on the stage</li>
+		<li>Listening to stage events</li>
+	</ol>
+	
+	We will now briefly discuss each ...
+			
+	<h4>Configuring the Stage</h4>
+	<h4>Updating the events on the stage</h4>
+	An event is defined as an array of POJO objects:
+<pre>
+[
+	{ 
+		id: 1234, 
+		title: 'Ate lunch', 
+		message: 'went to mcdonalds and had the meal of my life', 
+		start: '2014-12-31 12:00:00'
+		end: '2014-12-31 13:00:00'
+	},
+	// etc.
+]
+</pre>
+
+	<h4>Listening to stage events</h4>
+
+	
+</div>
+
+<div class="container">
+	{{ui-scheduler stage=stageConfig events=eventData}}
+</div>
