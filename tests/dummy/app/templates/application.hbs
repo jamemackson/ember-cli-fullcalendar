@@ -1,20 +1,22 @@
 <div class="container">
 	<h1>ui-scheduler</h1>
-	<h2>A week-view scheduler based on d3 and meant for both mobile and desktop</h2>
+	<h2>A ember-cli addon derived from the popular <a href="http://fullcalendar.io/">FullCalendar</a> javascript library</h2>
 
 	<h3>Description</h3>
 	<p>	
-		Allows users to see a week-view (strictly speaking it is any number of days you like) where days are 
-		spread across the horizontal space available and time-of-day is shown on the vertical dimension. 
-	</p>
-	<p>
-		Events that show on the scheduler canvas have the following key properties:
+		This component starts by wrapping the FullCalendar functionality with a component called <code>ui-scheduler</code> and then there are a few
+		subclasses of this base component that are layered on top to provide more targetted use cases:
 		<ul>
-			<li><code>editable</code> - descriptive attributes of the event can be edited</li>
-			<li><code>movable</code> - timing of the event is changable so event can be dragged to a new time</li>
+			<li>
+				<code>ui-reschedule</code> helps to address the scenario where you want to rebook a meeeting for a different time and while being able 
+				to see other events on your diary (to make an informed choice on when to rebook), only the meeting <i>being</i> rebooked is movable. 
+				View will default to week-agenda view.
+			</li>
+			<li>
+				<code>ui-date-chooser</code> a read-only calendar (defaults to month view) for seeing an overview of events but with the goal of 
+				letting a user "choose" a date to focus on. 
+			</li>
 		</ul>
-		
-		Functionally this component is meant to both present events but also allow users to interact and modify them as well. 
 	</p>
 	<h3>Usage</h3>
 	There are three considerations in using this components:
